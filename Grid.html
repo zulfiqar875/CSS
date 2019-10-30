@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<head>
+    <title>CSS Grid</title>
+</head>
+<style>
+    .item1{ grid-area: head;}
+    .item2{ grid-area: pannel;}
+    .item3{ grid-area: left;}
+    .item4{ grid-area: right;}
+    .item5{ grid-area: body;}
+
+    .grid{
+        display: grid;
+        grid-template-areas:
+        'head head head head head'
+        'pannel left left right right'
+        'pannel body body body body'
+        'pannel body body body body';
+        grid-gap: 10px;
+        background-color: orange;
+        padding: 10px;
+        height: 550px
+    }
+    .grid > div{
+        background-color: aqua;
+        font-size: 25px;  
+        align-content: center;
+        text-align: center;
+        font-family: 'Times New Roman';
+    }
+    .item1{
+        height: 50px;
+
+    }
+    .item3, .item4{
+        height: 100px;
+    }
+    .item5{
+        height: 350px;
+    }
+    p{
+        text-align: center;
+    }
+
+</style>
+<body>
+    <p>Hello Grid World</p>
+    <img src="https://www.howtogeek.com/wp-content/uploads/2019/01/windows_stock_lede.png" style="width:100%;">
+    <div class="grid">
+        <div class="item1"> Head  </div>
+        <div class="item2"> Pannel</div>
+        <div class="item3"> Left  </div>
+        <div class="item4"> Right </div>
+        <div class="item5"> Body  </div>
+
+    </div>
+</body>
+</html>
